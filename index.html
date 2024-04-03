@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb-Toggler</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #434343 0%, black 100%);
+        }
+        .app-heading{
+            text-align: center;
+            color: white;
+        }
+        .img-container{
+            background-color: white;
+            width: 250px;
+            margin: 5px auto;
+            display: flex;
+            justify-content: center;
+            border-radius: 15px;
+            padding: 10px 0px;
+        }
+        .img{
+            width: 230px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-toggle{
+            padding: 5px;
+            font-size: large;
+            margin: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+        .btn-1:hover{
+            background-color: green;
+        }
+        .btn-2:hover{
+            background-color: yellow;
+        }
+        .btn-3:hover{
+            background-color: black;
+            color: white;
+        }
+        .btn-4:hover{
+            background-color: red;
+        }
+        
+
+        @media screen and (max-width: 600px) {
+            .img-container{
+                width: 80%;
+            }
+            .app-heading{
+                font-size: large;
+            }
+            .img{
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="app-heading">4-Expression</h1>
+    <div class="img-container">
+    <img src="happy.jpg" alt="Happy Bulb" id="photo" class="img">
+    </div>
+    <div class="btn-container">
+        <button class="btn-toggle btn-1" onclick="happy()">Happy</button>
+        <button class="btn-toggle btn-2" onclick="sad()">sad</button>
+        <button class="btn-toggle btn-3" onclick="cry()">cry</button>
+        <button class="btn-toggle btn-4" onclick="angry()">angry</button>
+    </div>
+    <script>
+        function happy()
+        {
+            const expElement=document.getElementById("photo");
+            expElement.src="happy.jpg";
+        }
+        function sad()
+        {
+            const expElement=document.getElementById("photo");
+            expElement.src="sad.jpg";
+        }
+        function cry()
+        {
+            const expElement=document.getElementById("photo");
+            expElement.src="cry.jpg";
+        }
+        function angry()
+        {
+            const expElement=document.getElementById("photo");
+            expElement.src="angry.jpg";
+        }
+        
+    </script>
+
+</body>
+</html>
